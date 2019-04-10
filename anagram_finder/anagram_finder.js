@@ -9,7 +9,8 @@ class AnagramFinder{
       const otherSplit = otherWord.toLowerCase().split('');
       return otherSplit.every(letter => {
         return this.word.includes(letter)
-          && (otherWord.length === this.word.length);
+          && (otherWord.length === this.word.length)
+          && (otherWord.toLowerCase() !== this.word);
       });
     });
   };
