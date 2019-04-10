@@ -10,7 +10,9 @@ class AnagramFinder{
       return otherSplit.every(letter => {
         return this.word.includes(letter)
           && (otherWord.length === this.word.length)
-          && (otherWord.toLowerCase() !== this.word);
+          && (otherWord.toLowerCase() !== this.word)
+          && (otherWord.length > 0); /* final test is failing as output is an
+                                     // array containing an empty string */
       });
     });
   };
