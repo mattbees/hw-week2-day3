@@ -1,14 +1,15 @@
 class AnagramFinder{
 
   constructor (word) {
-    this.word = word; // toLowerCase()?
+    this.word = word;
   };
 
   findAnagrams(otherWords) {
     return otherWords.filter(otherWord => {
       const otherSplit = otherWord.split('');
       return otherSplit.every(letter => {
-        return this.word.includes(letter);
+        return this.word.includes(letter)
+          && (otherWord.length === this.word.length);
       });
     });
   };
@@ -16,11 +17,3 @@ class AnagramFinder{
 };
 
 module.exports = AnagramFinder;
-
-
-
-// isPangram() {
-//   return this.alphabet.every(letter => {
-//     return this.phrase.toLowerCase().includes(letter);
-//   });
-// };
