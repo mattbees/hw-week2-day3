@@ -3,6 +3,7 @@ const IsogramFinder = require('./isogram_finder.js');
 describe('IsogramFinder', () => {
   test('should be able to detect an isogram', () => {
     const isogramFinder = new IsogramFinder('subdermatoglyphic');
+    console.log(isogramFinder.isIsogram());
     expect(isogramFinder.isIsogram()).toBe(true);
   });
 
